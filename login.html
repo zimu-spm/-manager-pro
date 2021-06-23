@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/login.css">
     <link rel="stylesheet" href="assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="assets/fonts/iconfont.css">
 </head>
 
 <body>
@@ -41,11 +42,11 @@
         </div>
         <!-- 注册表单 -->
         <div class="regist-box">
-            <form class="layui-form">
+            <form class="layui-form" id="regist_form">
                 <!-- layui库中的表单 定制成用户名和密码输入框 -->
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-username"></i>
-                    <input type="text" name="username " required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                    <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
                 </div>
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
@@ -64,6 +65,7 @@
     </div>
     <script src="assets/lib/jquery.js"></script>
     <script src="assets/lib/layui/layui.all.js"></script>
+    <script src="assets/js/baseApi.js"></script>
     <script src="assets/js/login.js"></script>
 </body>
 
