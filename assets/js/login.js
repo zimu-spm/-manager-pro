@@ -59,10 +59,10 @@ $(function() {
             data: data,
             success: function(res) {
                 if (res.status != 0) {
-                    return layer.msg(res.message)
+                    return layer.msg('输入的账号密码不正确')
                 }
                 localStorage.setItem('token', res.token)
-                location.href = '/index.html' //跳转到index页面
+                top.location.href = 'index.html' //跳转到index页面
             }
         })
     })
