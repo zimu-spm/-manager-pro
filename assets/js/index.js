@@ -15,17 +15,19 @@ function getUserInfo() {
     })
 }
 $(function() {
-        getUserInfo()
-        $('#logout').on('click', function() {
-            layui.layer.confirm('是否退出登陆?', { icon: 3, title: '提示' }, function(index) {
-                localStorage.removeItem('token');
-                location.href = 'login.html'
-
-                layer.close(index);
-            });
-        })
+    //进行获取用户信息并渲染
+    getUserInfo()
+        //退出链接注册点击事件，事件处理程序：提示退出提示，按下确定，回退到登录页面，并清空token值
+    $('#logout').on('click', function() {
+        layui.layer.confirm('是否退出登陆?', { icon: 3, title: '提示' }, function(index) {
+            localStorage.removeItem('token');
+            location.href = 'login.html'
+            layer.close(index);
+        });
     })
-    //定义渲染用户图像和文本函数
+})
+
+//定义渲染用户图像和文本函数
 
 function renderAvatar(res) {
     var name = res.data.nickname || res.data.username
