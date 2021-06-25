@@ -7,7 +7,6 @@ function getUserInfo() {
             console.log(res);
 
             if (res.status != 0) return layui.layer.msg('获取用户基本信息失败');
-
             renderAvatar(res)
 
         },
